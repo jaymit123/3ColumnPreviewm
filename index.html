@@ -31,7 +31,12 @@
       font-weight: 400;
     }
 
-    h1,h2,h3,h4,h5,h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: hsl(0, 0%, 95%);
       font-family: "Big Shoulders Display";
       font-weight: 700;
@@ -42,19 +47,11 @@
       flex-grow: 1;
       display: flex;
       justify-content: center;
-
     }
 
-    @media screen and (max-width:500px) {
-      .car {
-        flex-direction: column;
-        padding: 5% 5% 0 5%;
-      }
-    }
 
     .car__model {
-      height: 12rem;
-      padding: 5%;
+      padding: 3rem;
     }
 
     .car__model--sedans {
@@ -88,6 +85,10 @@
       background: url("images/icon-luxury.svg");
     }
 
+    .car__model__title {
+      margin: 2rem 0 2rem 0%;
+    }
+
 
     .attribution {
       font-size: 11px;
@@ -95,8 +96,105 @@
       flex-shrink: 0;
     }
 
+    .car__model__btn {
+      margin: 2rem 0 1rem 0;
+      border-radius: 3rem;
+      padding: 1rem 1.5rem;
+      background-color: hsl(0, 0%, 95%);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .car__model__btn--sedans {
+      color: hsl(31, 77%, 52%);
+    }
+
+    .car__model__btn--sedans:hover {
+      color: hsl(0, 0%, 95%);
+      border: 1px solid hsl(0, 0%, 95%);
+      background-color: hsl(31, 77%, 52%);
+      ;
+    }
+
+    .car__model__btn--suvs {
+      color: hsl(184, 100%, 22%);
+    }
+
+    .car__model__btn--suvs:hover {
+      color: hsl(0, 0%, 95%);
+      border: 1px solid hsl(0, 0%, 95%);
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .car__model__btn--luxury {
+      color: hsl(179, 100%, 13%);
+    }
+
+    .car__model__btn--luxury:hover {
+      color: hsl(0, 0%, 95%);
+      border: 1px solid hsl(0, 0%, 95%);
+      background-color: hsl(179, 100%, 13%);
+    }
+
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+
+    @media screen and (max-width:768px) {
+      .car {
+        flex-direction: column;
+        padding: 5% 5% 0 5%;
+      }
+
+      .car__model:first-child {
+        border-radius: 0.4rem 0.4rem 0rem 0rem;
+      }
+
+      .car__model:last-child {
+        border-radius: 0rem 0rem 0.4rem 0.4rem;
+      }
+    }
+
+    @media screen and (min-width:768px) {
+      .car {
+        flex-grow: 0;
+      }
+
+      .car__model {
+        flex-basis: 25%;
+      }
+
+      .car__model:first-child {
+        border-radius: 0.4rem 0rem 0rem 0.4rem;
+      }
+
+      .car__model:last-child {
+        border-radius: 0rem 0.4rem 0.4rem 0rem;
+      }
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1280px) {
+      .car {
+        padding: 5% 5% 0 5%;
+      }
+
+      .car__model {
+        padding: 2rem;
+      }
+
+    }
+
+    @media screen and (min-width: 1280px) {
+      .car {
+        padding: 5% 7% 0 7%;
+      }
+
+      .car__model {
+        padding: 4rem;
+      }
+
     }
   </style>
 </head>
@@ -110,15 +208,15 @@
         excellent fuel economy. Ideal for cruising in the city
         or on your next road trip.
       </p>
-      <button class="car__model__btn car__model__btn--sedans"> Learn more </button>
+      <button class="car__model__btn car__model__btn--sedans"> Learn More </button>
     </article>
     <article class="car__model car__model--suvs">
       <div class="car__model__icon car__model__icon--suvs"></div>
-      <h1 class="car__model__title car__model__title--suvs">SUVs</h1>
+      <h1 class="car__model__title car__model__title--suvs">SUVS</h1>
       <p class="car__model__description car__model__description--suvs">Take an SUV for its spacious interior, power, and
         versatility. Perfect for your next family vacation
         and off-road adventures.</p>
-      <button class="car__model__btn car__model__btn--suvs"> Learn more </button>
+      <button class="car__model__btn car__model__btn--suvs"> Learn More </button>
     </article>
     <article class="car__model car__model--luxury">
       <div class="car__model__icon car__model__icon--luxury"></div>
@@ -126,7 +224,7 @@
       <p class="car__model__description car__model__description--luxury">Cruise in the best car brands without the
         bloated prices. Enjoy the enhanced comfort of a luxury
         rental and arrive in style.</p>
-      <button class="car__model__btn car__model__btn--luxury"> Learn more </button>
+      <button class="car__model__btn car__model__btn--luxury"> Learn More </button>
     </article>
 
   </main>

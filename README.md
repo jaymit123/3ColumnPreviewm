@@ -66,6 +66,7 @@ Learnt from following Articles:
 
 - Website - [Jaymit Desai](https://www.jaymitdesai.com)
 - Frontend Mentor - [@jaymitd](https://www.frontendmentor.io/profile/jaymitd)
+- Github - [@jaymit123](https://github.com/jaymit123)
 
 
 
